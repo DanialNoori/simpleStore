@@ -1,7 +1,7 @@
 <p align="center">
         <img src="https://raw.githubusercontent.com/hoseinz3/simpleStore/hoseinz3-patch-1/10.jpg" width="250" alt="PHP Insights">
           <p align="center">
-    <strong>This is a <a href="https://phpinsights.com">Takeaway.com</a> code challenge that I named it Road Runner </strong>.
+    This is a <a href="https://takeaway.com">Takeaway.com</a> code challenge that I named it<strong> Road Runner </strong>.
   </p>
 </p>
 
