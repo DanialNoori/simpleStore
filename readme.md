@@ -54,12 +54,25 @@ It builds the containers and runs commands that Road Runner needs to be up and r
 
 All codes that related to implementation of mailers are placed in the `Takeaway` folder. there are two types of classes in this folder:
 
-- `AbstractTransport` that is responsible for sending request to mailer's API. it's not coupled to `Guzzle` implementation so it's easy to test.
+- `Transport` that is responsible for sending request to mailer's API. it's not coupled to `Guzzle` implementation so it's easy to test.
 - MailerTransport such as `SendGridTransport` should provide right data that their API needs.
 
-`TransportInterface` that `AbstractTransport` implemented it tells us what is the functionality of every mailer. 
+`TransportInterface` that `Transport` implemented it tells us what is the functionality of every mailer. 
+```php
+<?php
 
-every mailer that would be implemented have to extends `AbstractTransport`
+namespace App\Takeaway\Transport;
+
+use App\Takeaway\MessageInterface;
+
+interface TransportInterface
+{
+    public function send(MessageInterface $message): string ;
+    public function healthCheck(): bool ;
+
+}
+```
+every mailer that would be implemented have to extends `Transport`
 for example:
 
 ```php
@@ -70,7 +83,7 @@ namespace App\Takeaway\Transport;
 use App\Takeaway\MessageInterface;
 use Psr\Http\Message\ResponseInterface;
 
-class MailGunTransport extends AbstractTransport
+class MailGunTransport extends Transport
 {
     protected $endpoint = '';
 
