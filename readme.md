@@ -54,10 +54,10 @@ It builds the containers and runs commands that Road Runner needs to be up and r
 
 All codes that related to implementation of mailers are placed in the `Takeaway` folder. there are two types of classes in this folder:
 
-- `Transport` that is responsible for sending request to mailer's API. it's not coupled to `Guzzle` implementation so it's easy to test.
-- MailerTransport such as `SendGridTransport` should provide right data that their API needs.
+- `Transport` this is responsible for sending request to mailer's API. it's not coupled to `Guzzle` implementation so it's easy to test.
+- MailerTransport such as `SendGridTransport` should provides right data that their API needs.
 
-`TransportInterface` that `Transport` implemented it tells us what is the functionality of every mailer. 
+`TransportInterface` that `Transport` implemented it, tells us what is the functionality of every mailer. 
 ```php
 <?php
 
@@ -72,8 +72,8 @@ interface TransportInterface
 
 }
 ```
-every mailer that would be implemented have to extends `Transport`
-for example:
+
+every mailer have to extends `Transport` for example:
 
 ```php
 <?php
@@ -106,4 +106,12 @@ class MailGunTransport extends Transport
 }
 
 ```
+
+#### How failover works
+there is a table named `mailers` that contains mailer's name and availability.
+there is a command named `MailerAvailabilityChecker` that runs every minute and check availability of all mailers and update `availability` field in `mailers` table.
+
+when an email would be sent in the `SendEmailJob` it select between available mailers in random order.
+
+
 
