@@ -106,8 +106,10 @@ class MailGunTransport extends Transport
 }
 
 ```
+#### Queue
+`SendEmailJob` is responsible for sending an email in background. it needs two argumans, `MessageInterface` and `$emailId`. it choose one mailer then it sends an email with that and insert name of `emails` table for specific email. 
 
-#### How failover works
+#### How its failover works
 there is a table named `mailers` that contains mailer's name and availability.
 there is a command named `MailerAvailabilityChecker` that runs every minute and check availability of all mailers and update `availability` field in `mailers` table.
 
