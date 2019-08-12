@@ -1,8 +1,9 @@
 <p align="center">
         <img src="https://raw.githubusercontent.com/hoseinz3/simpleStore/hoseinz3-patch-1/10.jpg" width="250" alt="PHP Insights">
+          <p align="center">
+    <strong>This is a <a href="https://phpinsights.com">Takeaway.com</a> code challenge that I named it Road Runner </strong>.
+  </p>
 </p>
-
-This is a [Takeaway.com](https://wwww.takeaway) code challenge that I named it **Road Runner**.
 
 **Road Runner** was created by [Mohammad Hosein abedi](https://github.com/hoseinz3), and is a fault tolerance email-service.
 It sends an email by the high available provider at the moment with the super simple syntax.
