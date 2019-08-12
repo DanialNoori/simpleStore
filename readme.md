@@ -1,3 +1,7 @@
+<p align="center">
+        <img src="https://raw.githubusercontent.com/hoseinz3/simpleStore/hoseinz3-patch-1/10.jpg" width="250" alt="PHP Insights">
+</p>
+
 ## About Road Runner
 This is a [Takeaway.com](https://wwww.takeaway) code challenge that I named it Road Runner.
 
