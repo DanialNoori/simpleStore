@@ -100,14 +100,14 @@ class MailGunTransport extends Transport
     }
 
     protected function getTrackingId(ResponseInterface $response)
-    {
+    {   
         // parse the $response and return tracking_id that came from mailer
     }
 }
 
 ```
 #### Queue
-`SendEmailJob` is responsible for sending an email in background. it needs two argumans, `MessageInterface` and `$emailId`. it choose one mailer then it sends an email with that and insert name of `emails` table for specific email. 
+`SendEmailJob` is responsible for sending an email in background. it needs two argumans, `MessageInterface` and `$emailId`. it choose one mailer then it sends an email with that and insert name of it to the `emails` table. 
 
 #### How its failover works
 there is a table named `mailers` that contains mailer's name and availability.
