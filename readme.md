@@ -2,13 +2,12 @@
         <img src="https://raw.githubusercontent.com/hoseinz3/simpleStore/hoseinz3-patch-1/10.jpg" width="250" alt="PHP Insights">
 </p>
 
-## About Road Runner
-This is a [Takeaway.com](https://wwww.takeaway) code challenge that I named it Road Runner.
+This is a [Takeaway.com](https://wwww.takeaway) code challenge that I named it **Road Runner**.
 
-Road Runner was created by [Mohammad Hosein abedi](https://github.com/hoseinz3), and is a fault tolerance email-service.
+**Road Runner** was created by [Mohammad Hosein abedi](https://github.com/hoseinz3), and is a fault tolerance email-service.
 It sends an email by the high available provider at the moment with the super simple syntax.
 
-### Overview
+## Overview
 - Once an email provider failed, It would be removed from the available providers.
 - A simple JSON API for sending emails
 - Simple Command-Line tools for sending emails
@@ -27,7 +26,7 @@ It sends an email by the high available provider at the moment with the super si
 - Deployment: [Docker](https://www.docker.com/).
 - Code Quality: [PHP Insights](https://github.com/nunomaduro/phpinsights)
 
-### Before Installation
+## 🚀 Quick start
 **Important:** If you have not the .env file in the root folder, you must copy or rename the .env.example to .env
 
 **Configuring a database**
@@ -36,7 +35,7 @@ It sends an email by the high available provider at the moment with the super si
 ```
 DB_HOST=mysql #name of Mysql Services in the docker-compose.yml file
 ```
-## Installation
+### Installation
 For using Road Runner you have a very easy task to do. Just run below command:
 
 ```./start.sh```
